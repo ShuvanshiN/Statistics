@@ -1,7 +1,7 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public int calculateSum(int[ ] sales) {
+    public int calculateSum(int[] sales) {
     int sum = 0;
     for (int sale : sales) {
     sum = sum + sale;
@@ -38,31 +38,25 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int NumberOfMonthsInWhichSalesWereBelowAverage(int[] sales) {
-        int monthsAmount = 0;
-        int sum =0;
-        for (int monthSale : sales) {
-            sum += monthSale;
-        }
-        for (int monthSale : sales) {
-            if (monthSale < findAvq(sales)) {
-                monthsAmount += 1;
+    public int numberOfMonthsInWhichSalesWereBelowAverage(int[] sales) {
+        int avg = findAvq(sales);
+        int monthCount = 0;
+        for (int sale : sales) {
+            if (sale < findAvq(sales)) {
+                monthCount += 1;
             }
         }
-        return monthsAmount;
+        return monthCount;
  }
-    public int NumberOfMonthsInWhichSalesWereAboveAverage(int[] sales) {
-        int monthsAmount = 0;
-        int sum =0;
-        for (int monthSale : sales) {
-            sum += monthSale;
-        }
-        for (int monthSale : sales) {
-            if (monthSale > findAvq(sales)) {
-                monthsAmount += 1;
+    public int numberOfMonthsInWhichSalesWereAboveAverage(int[] sales) {
+        int avg = findAvq(sales);
+        int monthCount = 0;
+        for (int sale : sales) {
+            if (sale < findAvq(sales)) {
+                monthCount += 1;
             }
         }
-        return monthsAmount;
-    }
+        return monthCount;
+}
 }
 

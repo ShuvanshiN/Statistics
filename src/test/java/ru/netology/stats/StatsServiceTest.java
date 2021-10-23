@@ -41,22 +41,22 @@ class StatsServiceTest {
         assertEquals(expected, actual);
     }
     @Test
-    void NumberOfMonthsInWhichSalesWereBelowAverage() {
+    void numberOfMonthsInWhichSalesWereBelowAverage() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
 
-        int actual = service.NumberOfMonthsInWhichSalesWereBelowAverage(sales);
+        int actual = service.numberOfMonthsInWhichSalesWereBelowAverage(sales);
 
         assertEquals(expected, actual);
     }
     @Test
-    void NumberOfMonthsInWhichSalesWereAboveAverage() {
+    void numberOfMonthsInWhichSalesWereAboveAverage() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
 
-        int actual = service.NumberOfMonthsInWhichSalesWereBelowAverage(sales);
+        int actual = service.numberOfMonthsInWhichSalesWereBelowAverage(sales);
 
         assertEquals(expected, actual);
     }
